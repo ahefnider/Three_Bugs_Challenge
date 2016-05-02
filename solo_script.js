@@ -17,12 +17,16 @@ position = document.getElementById('content');
 //Note that the information is not 'clean'
 for(var i = 0; i < array.length; i++){
 	array[i] = calculateSTI(array[i]);    // Right here, the array variable didn't have [i] at the end of it.
- 	newEl = document.createElement('li');
-	newText = document.createTextNode(array[i]);
-	newEl.appendChild(newText);
-	position.appendChild(newEl);
-}
 
+
+//This is where I turned that stuff below into jQuery stuff and things. 
+$('#content').append('<li>' + array[i] + '</li>');
+
+ // 	newEl = document.createElement('li');
+	// newText = document.createTextNode(array[i]);
+	// newEl.appendChild(newText);
+	// position.appendChild(newEl);
+}
 function calculateSTI(array){
   var newArray = [];
 
